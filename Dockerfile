@@ -15,8 +15,9 @@ RUN usermod -g 100 nobody
 RUN add-apt-repository ppa:jcfp/ppa
 RUN add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse"
 RUN add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse"
+RUN add-apt-repository ppa:jon-severinsson/ffmpeg
 RUN apt-get update -q
-RUN apt-get install -qy unrar par2 sabnzbdplus wget
+RUN apt-get install -qy unrar par2 sabnzbdplus wget ffmpeg
 
 # Install multithreaded par2
 RUN apt-get remove --purge -y par2
