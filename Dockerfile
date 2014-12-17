@@ -17,7 +17,7 @@ RUN add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe
 RUN add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse"
 RUN add-apt-repository ppa:jon-severinsson/ffmpeg
 RUN apt-get update -q
-RUN apt-get install -qy unrar par2 sabnzbdplus wget ffmpeg
+RUN apt-get install -qy unrar par2 sabnzbdplus wget ffmpeg sabnzbdplus-theme-mobile
 
 # Install multithreaded par2
 RUN apt-get remove --purge -y par2
