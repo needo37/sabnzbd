@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.11
+FROM phusion/baseimage:0.9.16
 MAINTAINER needo <needo@superhero.org>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -21,8 +21,8 @@ RUN apt-get install -qy unrar par2 sabnzbdplus wget ffmpeg sabnzbdplus-theme-mob
 
 # Install multithreaded par2
 RUN apt-get remove --purge -y par2
-RUN wget -P /tmp http://www.chuchusoft.com/par2_tbb/par2cmdline-0.4-tbb-20100203-lin64.tar.gz
-RUN tar -C /usr/local/bin -xvf /tmp/par2cmdline-0.4-tbb-20100203-lin64.tar.gz --strip-components 1
+RUN wget -P /tmp http://www.chuchusoft.com/par2_tbb/par2cmdline-0.4-tbb-20141125-lin64.tar.gz
+RUN tar -C /usr/local/bin -xvf /tmp/par2cmdline-0.4-tbb-20141125-lin64.tar.gz --strip-components 1
 
 # Path to a directory that only contains the sabnzbd.conf
 VOLUME /config
