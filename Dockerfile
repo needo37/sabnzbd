@@ -28,7 +28,7 @@ RUN tar -C /usr/local/bin -xvf /tmp/par2cmdline-0.4-tbb-20141125-lin64.tar.gz --
 VOLUME /config
 VOLUME /downloads
 
-EXPOSE 8080
+EXPOSE 8080 9090
 
 # Add sabnzbd to runit
 RUN mkdir /etc/service/sabnzbd
